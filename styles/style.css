@@ -1,0 +1,133 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   background-color: BLACK;
+}
+
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.header {
+   top: 0;
+   left: 0;
+   position: fixed;
+   z-index: 1;
+   width: 100%;
+}
+
+.bar {
+   display: block;
+   width: 25px;
+   height: 3px;
+   margin: 5px auto;
+   transition: all 0.3s ease-in-out;
+   background-color: white;
+}
+
+.header__wrap {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid #BABBC5;
+}
+
+.header__menu {
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header__menu-link {
+   padding: 42px 10px;
+   text-decoration: none;
+   font-family: "Raleway", sans-serif;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 13px;
+   line-height: 15px;
+   text-transform: uppercase;
+   color: #ffffff;
+   text-align: center;
+   display: inline-block;
+   min-width: 134px;
+   position: relative;
+}
+
+
+.header__menu-link::before {
+   content: "";
+   width: 100%;
+   border-bottom: 3px solid transparent;
+   display: inline-block;
+   position: absolute;
+   left: 0;
+   top: 100%;
+   transform: translateY(-100%);
+}
+
+.header__menu-link:hover::before {
+   border-bottom: 3px solid #BABBC5;
+}
+
+.header__menu-link:active::before {
+   border-bottom: 3px solid #e71414;
+}
+
+.header__menu-link:active {
+   color: #E71414;
+}
+
+.header__hamburger{
+   display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+   .header__menu{
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+   }
+   .header__hamburger{
+      display: block;
+      cursor: pointer
+   }
+   .header__wrap
+   {
+      padding-top: 19px;
+      border:none
+   }
+   .header__wrap{
+      column-gap: 90px;
+   }
+   .header__menu-link{
+      font-size: 0px;
+      padding-top: 10px;
+   }
+   .container{
+      padding: 0 20px;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px)
+{ 
+   .header__menu-link{
+      font-size: 12px;
+      line-height: 14px;
+      min-width: 112px;
+
+   }
+   .container{
+      padding: 0 20px;
+   }
+}
