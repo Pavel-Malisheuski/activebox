@@ -1,8 +1,6 @@
 * {
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
-   background-color: BLACK;
 }
 
 
@@ -83,12 +81,12 @@
    color: #E71414;
 }
 
-.header__hamburger{
+.header__hamburger {
    display: none;
 }
 
-@media (min-width: 320px) and (max-width: 767px){
-   .header__menu{
+@media (min-width: 320px) and (max-width: 767px) {
+   .header__menu {
       position: fixed;
       left: -100%;
       top: 5rem;
@@ -98,36 +96,110 @@
       text-align: center;
       transition: 0.3s;
    }
-   .header__hamburger{
+
+   .header__hamburger {
       display: block;
       cursor: pointer
    }
-   .header__wrap
-   {
+
+   .header__wrap {
       padding-top: 19px;
-      border:none
+      border: none
    }
-   .header__wrap{
+
+   .header__wrap {
       column-gap: 90px;
    }
-   .header__menu-link{
+
+   .header__menu-link {
       font-size: 0px;
       padding-top: 10px;
    }
-   .container{
+
+   .container {
       padding: 0 20px;
    }
 }
 
-@media (min-width: 768px) and (max-width: 1024px)
-{ 
-   .header__menu-link{
+@media (min-width: 768px) and (max-width: 1024px) {
+   .header__menu-link {
       font-size: 12px;
       line-height: 14px;
       min-width: 112px;
 
    }
-   .container{
+
+   .container {
       padding: 0 20px;
    }
+}
+
+.banner {
+   padding-top: 230px;
+   padding-bottom: 120px;
+   position: relative;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-image: url(../images/background.png);
+}
+
+.banner::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #252b49;
+   opacity: 0.8;
+   display: block;
+}
+
+.banner__wrap {
+   position: relative;
+   z-index: 1t;
+}
+
+.banner__title {
+   font-family: 'Raleway', sans-serif;
+   font-style: normal;
+   font-weight: 900;
+   font-size: 64px;
+   line-height: 75px;
+   color: #FFFFFF;
+   text-align: center;
+   text-transform: uppercase;
+   margin-bottom: 32px;
+   padding: 0px 68px;
+}
+
+.banner__subtitle {
+   font-family: 'Raleway', sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 28px;
+   text-align: center;
+   color: #FFFFFF;
+   margin-bottom: 82px;
+   padding: 0 88px;
+}
+
+.banner__btn {
+   display: block;
+   margin: 0 auto;
+   border: none;
+   font-family: 'Raleway', sans-serif;
+   font-style: normal;
+   font-weight: 900;
+   font-size: 24px;
+   line-height: 28px;
+   text-align: center;
+   text-transform: uppercase;
+   color: #FFFFFF;
+   background: #FF4343;
+   max-width: 370px;
+   width: 100%;
+   padding: 26px;
 }
